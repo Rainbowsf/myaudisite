@@ -1,0 +1,49 @@
+{%load static%}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block name%}{%endblock%}</title>
+    <link rel="shortcut icon" href="{% static 'main/img/icon.png'%}" type="image/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+</head>
+<body>
+    <div class="header">
+       <a href="{%url 'home'%}"><img src="{% static 'main/img/audi.png'%}" alt="logo"></a>
+        <ul>
+           <a href="{%url 'products'%}"><li><i class="fas fa-car-alt"></i> Модельный ряд</li></a>
+           <a href="{%url 'news_home'%}"><li><i class="fas fa-newspaper"></i> Новости</li></a>
+           <a href="{%url 'e-tron'%}"><li><i class="fas fa-lightbulb"></i> Новинки</li></a>
+           <a href="{%url 'about'%}"><li><i class="fas fa-info-circle"></i> О компании</li></a>
+           <a href="{%url 'contacts'%}"><li><i class="fas fa-info-circle"></i> Контакты</li></a>
+        </ul>
+    </div>
+    <main class="main">
+        <div class = "features">
+        {% block content%}
+
+        {% endblock %}
+        </div>
+    </main>
+<footer class="footer">
+    <div class="footer_text1">
+<a href=https://www.audi.ru/ru/web/ru.html>
+   © 2020 AUDI AG. Все права защищены</a><BR>
+<p>Указаны максимальные цены перепродажи на модели Audi (распространяются на автомобили 2020 года выпуска) с учетом сдачи прежнего автомобиля в «трейд-ин» с ограничением по дате выпуска, стране
+производства и марке производителя. Предложение не является публичной офертой. Изображенные автомобили могут быть оснащены оборудованием, устанавливаемым за дополнительную плату.
+На автомобили марки Audi производителем предоставляется гарантия качества на срок 2 года, а также на дополнительные 2 года или до достижения общего пробега автомобиля 120 000 км (в зависимости
+    от того, какое событие что наступит ранее), при этом в первые 2 года пробег не ограничивается и не учитывается.</p>
+    </div>
+    <div class="footer_text2">
+    Hand-made by <a href="https://vk.com/rainbowsf">the golden hands ;)</a><BR>
+        <a href="{%url 'sitemap'%}">Карта сайта</a><BR>
+    powered by python 3.5
+    </div>
+</footer>
+</body>
+</html>

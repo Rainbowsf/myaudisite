@@ -1,0 +1,13 @@
+{%extends 'main/layout.html'%}
+
+{%block name%}Новости{%endblock%}
+{%block content%}
+{%for el in news%}
+    <div class = "article123">
+        <a href="{%url 'news_detail' el.id%}"><h3>{{el.title}}</h3></a>
+        <h5>{{el.anons}}</h5>
+    </div>
+{%endfor%}
+
+
+{%endblock%}
