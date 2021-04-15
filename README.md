@@ -1,2 +1,2 @@
 # myaudisite
-simple audi site 
+just a simple audi site with htmls css and one database on sqlite "news"(title, date, author, text)
